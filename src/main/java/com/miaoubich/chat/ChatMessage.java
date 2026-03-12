@@ -1,8 +1,5 @@
 package com.miaoubich.chat;
 
-import lombok.Data;
-
-
 public class ChatMessage {
 
 	private String content;

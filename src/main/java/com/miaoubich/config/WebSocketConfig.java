@@ -1,4 +1,4 @@
-package com.miaoubich.confi;
+package com.miaoubich.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
@@ -23,7 +23,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 	@Override
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
 		/*
-		 * This method registers the WebSocket endpoint for clients to connect to. It:
+		 * This method registers the WebSocket endpoint for clients to connect to It:
 		 * Adds an endpoint at the path /ws that clients can connect to
 		 * Enables SockJS fallback, which provides alternative transport mechanisms (like HTTP long-polling) for browsers that don't support WebSockets natively
 	     * This is the URL pattern clients would use: ws://localhost:8080/ws
