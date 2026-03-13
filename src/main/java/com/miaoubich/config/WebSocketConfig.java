@@ -28,7 +28,10 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 		 * Enables SockJS fallback, which provides alternative transport mechanisms (like HTTP long-polling) for browsers that don't support WebSockets natively
 	     * This is the URL pattern clients would use: ws://localhost:8080/ws
 		 * */
-		registry.addEndpoint("/ws").withSockJS();
+		registry.addEndpoint("/ws")
+		.setAllowedOrigins("*")
+		.setAllowedOriginPatterns("*")
+		.withSockJS();
 	}
 	
 	@Override
