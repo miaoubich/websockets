@@ -29,8 +29,8 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 	     * This is the URL pattern clients would use: ws://localhost:8080/ws
 		 * */
 		registry.addEndpoint("/ws")
-		.setAllowedOrigins("*")
-		.setAllowedOriginPatterns("*")
+		.setAllowedOrigins("*")// to connect from postman to a websocket endpoint, we need to allow all origins by setting allowed origins to "*".
+		.setAllowedOriginPatterns("*")// and this is for spring security to allow all origins, otherwise we will get an error'400' "Invalid CORS request" when we try to connect from postman to a websocket endpoint
 		.withSockJS();
 	}
 	
