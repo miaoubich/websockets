@@ -10,10 +10,7 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
 import com.miaoubich.chat.MessageType;
 
-import lombok.RequiredArgsConstructor;
-
 @Component
-@RequiredArgsConstructor
 public class WebSocketEventListener {
 	
 	private static final Logger log = LoggerFactory.getLogger(WebSocketEventListener.class);
